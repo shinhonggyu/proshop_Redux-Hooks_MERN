@@ -4,7 +4,8 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import {
   productListReducer,
   productDetailReducer,
-  productDeleteReducer
+  productDeleteReducer,
+  productCreateReducer,
 } from './reducers/productReducers'
 import { cartReducer } from './reducers/cartReducers'
 import {
@@ -14,14 +15,20 @@ import {
   userUpdateProfileReducer,
   userListReducer,
   userDeleteReducer,
-  userUpdateReducer
+  userUpdateReducer,
 } from './reducers/userReducers'
-import { orderCreateReducer, orderDetailsReducer, orderPayReducer, orderListMyReducer } from './reducers/orderReducers'
+import {
+  orderCreateReducer,
+  orderDetailsReducer,
+  orderPayReducer,
+  orderListMyReducer,
+} from './reducers/orderReducers'
 
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailReducer,
   productDelete: productDeleteReducer,
+  productCreate: productCreateReducer,
   cart: cartReducer,
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
@@ -45,12 +52,14 @@ const userInfoFromStorage = localStorage.getItem('userInfo')
   : null
 
 const shippingAddressFromStorage = localStorage.getItem('shippingAddress')
-? JSON.parse(localStorage.getItem('shippingAddress'))
-: {}
+  ? JSON.parse(localStorage.getItem('shippingAddress'))
+  : {}
 
 const initialState = {
-  cart: { cartItems: cartItemsFromStorage,
-  shippingAddress: shippingAddressFromStorage },
+  cart: {
+    cartItems: cartItemsFromStorage,
+    shippingAddress: shippingAddressFromStorage,
+  },
   userLogin: { userInfo: userInfoFromStorage },
 }
 
