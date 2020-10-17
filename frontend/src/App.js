@@ -18,7 +18,7 @@ import UserEditScreen from './screens/UserEditScreen'
 import ProductListScreen from './screens/ProductListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
-import SearchBox from './components/SearchBox'
+// import SearchBox from './components/SearchBox'
 
 const App = () => {
   return (
