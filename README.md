@@ -1,1 +1,1 @@
-배포: shinproshopapp.herokuapp.com
+heroku: shinproshopapp.herokuapp.com
