@@ -1,1 +1,1 @@
-shinproshopapp.herokuapp.com
+https://shinproshopapp.herokuapp.com/
